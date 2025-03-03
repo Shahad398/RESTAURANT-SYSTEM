@@ -17,7 +17,8 @@ while (true) {
 	System.out.println("\nMain Menu:");
     System.out.println("1. New Order");
     System.out.println("2. Cancel Order");
-    System.out.println("3. Exit");
+System.out.println("3. View previous requests");
+    System.out.println("4. Exit");
     System.out.print("Choose an option: ");
     
     int choice = input.nextInt();
@@ -69,7 +70,8 @@ while (true) {
             
     	}//while(ordering )
     }//if(choice==1)
-    	
+    if(choice==3)
+	System.out.println(customer.toString());    
 }//while (true)
 
 
