@@ -60,6 +60,14 @@ System.out.println("3. View previous requests");
                     String extra = input.nextLine();
                   ((FoodItem) burger).addIngredient(new Ingredient(extra));
                     input.nextLine();
+			 System.out.print("Do you want to remove any added ingredients? (y/n): ");
+                    char removeExtras = input.next().charAt(0);
+                    input.nextLine();
+                    if (removeExtras == 'y') {
+                        System.out.print("Enter ingredient to remove: ");
+                        String removeExtra = input.nextLine();
+                        ((FoodItem) burger).removeIngredient(removeExtra);
+                    }
                 }
                 order.addItem(burger);
 
@@ -101,7 +109,8 @@ System.out.println("3. View previous requests");
 		case 3:
             	System.out.println("\nAvailable Ice Cream: Vanilla, Chocolate, Strawberry - 12 SAR");
             	String IceCream=input.next();
-            	DessertItem sweetItem = new DessertItem(350,"Ice Cream", 12,IceCream);
+            	DessertItem dessertItem = new DessertItem(350,"Ice Cream", 12,IceCream);
+			    order.addItem(dessertItem);
             	break;
 	        case 4:
             	System.out.println("\nValue Meals:");
