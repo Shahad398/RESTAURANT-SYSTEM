@@ -4,7 +4,7 @@ public class RestaurantSystem {
 
 	public static void main(String[] args) {
 
-		Scanner input=new Scanner(system.in);
+		Scanner input=new Scanner(System.in);
 
 		
 System.out.print("Enter Customer ID: ");
