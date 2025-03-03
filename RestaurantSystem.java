@@ -119,8 +119,10 @@ System.out.println("3. View previous requests");
                 System.out.println("3. Cheese Burger Meal - 18 SAR");
                 System.out.print("Choose a meal: ");
                 int mealChoice = input.nextInt();
-
-
+if (burgerChoice == 1) burger = new SpecialItem (800," Beef Burger meal", 22);
+            else if (burgerChoice == 2) burger = new SpecialItem(700," Chicken Burger meal", 22);
+            else if (burgerChoice == 3) burger = new SpecialItem(650,"Cheese Burger", 18);
+              order.addItem(SpecialItem);
 
 		break;
 		case 5:
@@ -137,6 +139,7 @@ System.out.println("3. View previous requests");
 	 else if (choice == 2) {
         System.out.println("Order Canceled.");
         order.clearOrder();
+	  customer.placeOrder(order);	 
    else if(choice==3){
 	System.out.println(customer.toString());
    }
